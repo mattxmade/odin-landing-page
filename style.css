@@ -33,3 +33,107 @@ html {
   font-family: 'Roboto-Regular', sans-serif;
 }
 
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+/*=================
+Header: logo + nav
+==================*/
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+header nav ul {
+  display: flex;
+  list-style: none;
+  gap: 0.8rem;
+}
+
+/*===============
+Hero title card
+================*/
+.title-card {
+  display: flex;
+  padding: 1rem;
+  gap: 1.5rem;
+}
+
+.title-card-image-col-2 {
+  width: 45rem;
+  height: 15rem;
+}
+
+/*==============
+Image Tile Cards
+================*/
+.main-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main-image-tiles {
+  display: flex;
+}
+
+.image-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.image-box {
+  width: 8rem;
+  height: 8rem;
+  display: flex;
+  justify-content: center;
+}
+
+.image-box img {
+  width: inherit;
+  height: auto;
+}
+
+.image-card p {
+  text-align: center;
+}
+
+/*==========
+Testimonial
+============*/
+
+.testimonial {
+  display: flex;
+  flex-direction: column;
+  padding: 3rem;
+}
+
+.author {
+  align-self: flex-end;
+}
+
+/*============
+Action banner
+=============*/
+
+.call-to-action-banner {
+  display: flex;
+  justify-content: space-between;
+  padding: 3rem;
+}
+
+/*======
+Footer
+========*/
+footer {
+  text-align: center;
+  padding: 1rem
+}
