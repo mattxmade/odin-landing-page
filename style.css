@@ -20,41 +20,87 @@ Universal selectors
 *::before,
 *::after {
   box-sizing: border-box;
-  padding: 0;
-  margin: 0;
+  /* padding: 0;
+  margin: 0; */
+}
+
+/*======
+Root variables
+=========*/
+:root {
+  --background: #1F2937;
+  --hero-light: #F9FAF8;
+  --info-dblu: #1F2937;
+  --subh-grey: #E5E7EB;
+  --butn-blue: #3882F6;
 }
 
 /*=========
 Page setup
 ===========*/
-
 html {
   min-height: 100vh;
   font-family: 'Roboto-Regular', sans-serif;
+  font-size: 62.5%;
 }
 
 body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  gap: 2rem;
-  padding: 2rem;
+  align-content: center;
+  font-size: 1.6rem;
+  margin: 0 auto;
+}
+
+/*======
+Buttons
+========*/
+button,
+.action-btn {
+  background-color: var(--butn-blue);
+  width: 14rem;
+  height: 4rem;
+  border-radius: 0.8rem;
+  color: white;
+  font-size: 1.7rem;
+  font-weight: bold;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.border-highlight {
+  border: 0.2rem solid white;
 }
 
 /*=================
 Header: logo + nav
 ==================*/
-
 header {
   display: flex;
   justify-content: space-between;
-  padding: 1rem;
+  align-items: center;
+  padding: 1.5rem;
+}
+
+.header-logo {
+  color: var(--hero-light);
+  font-size: 2.4rem;
+}
+
+header nav {
+  justify-self: center;
 }
 
 header nav ul {
+  padding: 0;
+  margin: 0;
   display: flex;
   list-style: none;
-  gap: 0.8rem;
+  gap: 5rem;
+  color: var(--subh-grey);
 }
 
 /*===============
@@ -62,13 +108,48 @@ Hero title card
 ================*/
 .title-card {
   display: flex;
-  padding: 1rem;
-  gap: 1.5rem;
+  padding: 10rem 0 13rem;
+  gap: 5rem;
+  /* flex-wrap: wrap; */
+}
+
+.title-card h1 {
+  font-size: 4.8rem;
+  font-weight: bold;
+  color: var(--hero-light);
+  margin: 0;
+}
+
+.title-card p {
+  color: var(--subh-grey);
+  font-size: 1.8rem;
+  margin: 0;
+}
+
+.title-card-info-col-1 {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 1rem;
 }
 
 .title-card-image-col-2 {
-  width: 45rem;
-  height: 15rem;
+  width: 110rem;
+  background-color: plum;
+}
+
+.title-card-image-col-1,
+.title-card-image-col-2 {
+  height: 25rem;
+}
+
+/*=========
+background
+===========*/
+header, .title-card {
+  background-color: var(--background);
+  padding-left: 16rem;
+  padding-right: 16rem;
 }
 
 /*==============
@@ -77,24 +158,40 @@ Image Tile Cards
 .main-info {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
+  align-self: center;
+  max-width: 100rem;
+}
+
+.main-info h2 {
+  color: var(--info-dblu);
+  font-weight: bold;
+  font-size: 3.6rem;
+  margin: 5rem 0 4.5rem;
 }
 
 .main-image-tiles {
   display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 5rem;
 }
 
 .image-card {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 17rem;
 }
 
 .image-box {
-  width: 8rem;
-  height: 8rem;
+  width: 17rem;
+  height: 17rem;
   display: flex;
   justify-content: center;
+  border: 0.5rem solid var(--butn-blue);
+  border-radius: 2rem;
 }
 
 .image-box img {
@@ -109,25 +206,56 @@ Image Tile Cards
 /*==========
 Testimonial
 ============*/
-
 .testimonial {
   display: flex;
   flex-direction: column;
-  padding: 3rem;
+  padding: 11rem 28rem;
+  background-color: var(--subh-grey);
+  margin: 10rem 0 0;
+}
+
+.testimonial p {
+  padding: 0;
+  margin: 0;
+}
+
+.quote {
+  color: var(--info-dblu);
+  font-style: italic;
+  font-size: 3.6rem;
 }
 
 .author {
   align-self: flex-end;
+  font-size: 2.5rem;
 }
 
 /*============
 Action banner
 =============*/
-
 .call-to-action-banner {
+  align-self: center;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 3rem;
+  background-color: var(--butn-blue);
+  color: white;
+  width: calc(100vw - 30rem);
+  height: 15rem;
+  border-radius: 1rem;
+  margin: 10rem 0;
+}
+
+.call-to-action-banner p,
+.call-to-action-banner h2 {
+  padding: 0;
+  margin: 0;
+}
+
+.call-to-action-banner p {
+  color: var(--subh-grey);
+  font-size: 1.8rem;
 }
 
 /*======
@@ -135,5 +263,9 @@ Footer
 ========*/
 footer {
   text-align: center;
-  padding: 1rem
+  padding: 1rem;
+  background-color: var(--background);
+  color: var(--subh-grey);
+  padding: 4rem 0;
+  font-size: 1.8rem;
 }
