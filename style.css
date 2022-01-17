@@ -380,8 +380,7 @@ footer {
 
 @media (min-width: 1050px) {
   .testimonial {
-    padding-left: 15rem;
-    padding-right: 15rem;;
+    padding: 11rem 15rem;
   }
   
 }
