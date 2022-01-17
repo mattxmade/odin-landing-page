@@ -16,9 +16,9 @@ Fonts
   font-style: normal;
 }
 
-/* * {
+* {
   outline: 1px dashed red;
-} */
+}
 
 /*=================
 Universal selectors
@@ -121,7 +121,6 @@ Hero title card
   display: flex;
   padding: 10rem 0 13rem;
   gap: 5rem;
-  flex-wrap: wrap;
 }
 
 .title-card a {
@@ -322,7 +321,28 @@ footer {
   background-color: var(--background);
 }
 
-@media only screen and (max-width: 1315px) {
+/* @media only screen and (max-width: 1315px) {
+
+
+
+} */
+
+@media (min-width: 481px) and (max-width: 1050px) {
+
+  .header-logo {
+    margin-right: 2rem;
+  }
+
+  .title-card {
+    justify-content: center;
+  }
+
+  header,
+  .title-card {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+
   .call-to-action-banner {
     padding: 1rem 2rem;
     margin-left: 2rem;
@@ -349,22 +369,19 @@ footer {
 
   .footer-margin-bottom {
     margin-bottom: 1.5rem;
-  }
-
+  }  
 }
 
-@media (min-width: 481px) and (max-width: 900px) {
-    header {
-    padding: 2rem;
-  }
-
-  .header-logo {
-    margin-right: 2rem;
-  }
-
+@media (max-width: 1050px) {
   .title-card {
-    justify-content: center;
-    padding-left: 4rem;
-    padding-right: 4rem;
+    flex-wrap: wrap;
   }
+}
+
+@media (min-width: 1050px) {
+  .testimonial {
+    padding-left: 15rem;
+    padding-right: 15rem;;
+  }
+  
 }
