@@ -92,7 +92,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1.5rem;
+  padding: 1.5rem 0;
 }
 
 .header-logo {
@@ -122,6 +122,11 @@ Hero title card
   padding: 10rem 0 13rem;
   gap: 5rem;
   flex-wrap: wrap;
+}
+
+.title-card a {
+  text-decoration: none;
+  color: white;
 }
 
 .title-card h1 {
@@ -298,6 +303,11 @@ Action banner
   font-size: 1.8rem;
 }
 
+.call-to-action-banner a {
+  text-decoration: none;
+  color: white;
+}
+
 /*======
 Footer
 ========*/
@@ -313,22 +323,6 @@ footer {
 }
 
 @media only screen and (max-width: 1315px) {
-
-    header {
-    padding: 2rem;
-  }
-
-  .header-logo {
-    margin-right: 2rem;
-  }
-
-  .title-card {
-    justify-content: center;
-    padding-left: 4rem;
-    padding-right: 4rem;
-    text-align: center;
-  }
-
   .call-to-action-banner {
     padding: 1rem 2rem;
     margin-left: 2rem;
@@ -357,4 +351,20 @@ footer {
     margin-bottom: 1.5rem;
   }
 
+}
+
+@media (min-width: 481px) and (max-width: 900px) {
+    header {
+    padding: 2rem;
+  }
+
+  .header-logo {
+    margin-right: 2rem;
+  }
+
+  .title-card {
+    justify-content: center;
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
 }
