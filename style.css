@@ -372,7 +372,7 @@ footer {
   .call-to-action-banner {
     flex-direction: column;
     align-items: center;
-    padding: 2.5rem 2rem;
+    padding: 2rem 2rem;
     margin-left: 2rem;
     margin-right: 2rem;
     gap: 6rem;
