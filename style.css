@@ -1,7 +1,6 @@
-/*====
-Fonts
-=====*/
-
+/*=======
+  Fonts
+========*/
 @font-face {
   font-family: 'Roboto-Regular';
   src: url('fonts/Roboto/Roboto-Regular.ttf') format('truetype');
@@ -16,22 +15,18 @@ Fonts
   font-style: normal;
 }
 
-/* * {
-  outline: 1px dashed red;
-} */
-
-/*=================
-Universal selectors
-==================*/
+/*=====================
+  Universal selectors
+======================*/
 *,
 *::before,
 *::after {
   box-sizing: border-box;
 }
 
-/*======
-Root variables
-=========*/
+/*================
+  Root variables
+==================*/
 :root {
   --background: #1F2937;
   --hero-light: #F9FAF8;
@@ -40,192 +35,192 @@ Root variables
   --butn-blue: #3882F6;
 }
 
-/*=========
-Page setup
-===========*/
-html {
-  min-height: 100vh;
-  font-family: 'Roboto-Regular', sans-serif;
+/*=============
+  Page setup
+===============*/
+html { 
   font-size: 62.5%;
   max-width: 200rem;
+  min-height: 100vh;
+  font-family: 'Roboto-Regular', sans-serif;
 }
 
 body {
+  margin: 0 auto;
+  font-size: 1.6rem;
   display: flex;
   align-content: center;
   flex-direction: column;
   justify-content: space-between;
-  margin: 0 auto;
-  font-size: 1.6rem;
 }
 
-/*======
-Buttons
-========*/
+/*==========
+  Buttons
+============*/
 button,
 .action-btn {
-  background-color: var(--butn-blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   width: 14rem;
   height: 4rem;
-  border-radius: 0.8rem;
   font-size: 1.7rem;
   font-weight: bold;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  text-align: center; 
+
+  border-radius: 0.8rem;
+  background-color: var(--butn-blue);  
 }
 
 .action-btn a {
-  text-decoration: none;
   color: white;
+  text-decoration: none;
 }
 
 .border-highlight {
   border: 0.2rem solid white;
 }
 
-/*=================
-Header: logo + nav
-==================*/
-header {
+/*=====
+  nav
+=======*/
+nav {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-self: center;
+  justify-content: space-between;
   padding: 1.5rem 0;
 }
 
-.header-logo {
-  color: var(--hero-light);
+nav .header-logo {
   font-size: 2.4rem;
+  color: var(--hero-light);
   font-family: 'Mochiy Pop P One', sans-serif;
 }
 
-header nav {
-  justify-self: center;
-}
-
-header nav ul {
-  padding: 0;
+nav ul {
   margin: 0;
+  padding: 0;
+  gap: 5rem;
   display: flex;
   list-style: none;
-  gap: 5rem;
   color: var(--subh-grey);
-}
-
-/*===============
-Hero title card
-================*/
-.title-card {
-  display: flex;
-  padding: 10rem 0 13rem;
-  gap: 5rem;
-}
-
-.title-card a {
-  text-decoration: none;
-  color: white;
-}
-
-.title-card h1 {
-  font-size: 4.8rem;
-  font-weight: bold;
-  color: var(--hero-light);
-  margin: 0;
-}
-
-.title-card p {
-  color: var(--subh-grey);
-  font-size: 1.8rem;
-  margin: 0;
-}
-
-.title-card-info-col-1 {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  gap: 1rem;
-  width: 40rem;
-}
-
-.title-card-image-col-2 {
-  background-color: plum;
-  border: 0.4rem solid rgb(65, 59, 121);
-  border-radius: 0.3rem;
-  overflow: hidden;
-  overflow-x: hidden;
-  overflow-y: hidden;
-  width: 52.5rem;
-}
-
-.title-card-image-col-1,
-.title-card-image-col-2 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 25rem;
-}
-
-.title-card-image-col-2 img {
-  width: 100rem;
-}
-
-/*=========
-background
-===========*/
-header, .title-card {
-  background-color: var(--background);
-  padding-left: 16rem;
-  padding-right: 16rem;
 }
 
 /*==============
-Image Tile Cards
+  Header: hero
 ================*/
-.main-info {
+.title-card {
+  gap: 5rem;
   display: flex;
+  padding: 10rem 0 13rem;
+}
+
+.title-card a {
+  color: white;
+  text-decoration: none;
+}
+
+.title-card h1 {
+  margin: 0;
+  font-size: 4.8rem;
+  font-weight: bold;
+  color: var(--hero-light);
+}
+
+.title-card p {
+  margin: 0;
+  font-size: 1.8rem;
+  color: var(--subh-grey);
+}
+
+.title-card-col-1 {
+  width: 40rem;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.title-card-col-2 {
+  width: 52.5rem;
+  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  border-radius: 0.3rem;
+  background-color: plum;
+  border: 0.4rem solid rgb(65, 59, 121);
+}
+
+.title-card-col-2 {
+  height: 25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.title-card-col-2 img {
+  width: 100rem;
+}
+
+/*============
+  background
+==============*/
+nav, .title-card { 
+  padding-left: 16rem;
+  padding-right: 16rem;
+  background-color: var(--background);
+}
+
+/*============
+  Main Cards
+==============*/
+main {
+  display: flex;
+  align-self: center;
+  align-items: center;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  align-self: center;
-  max-width: 100rem;
 }
 
-.main-info h2 {
-  color: var(--info-dblu);
-  font-weight: bold;
+main h2 {
   font-size: 3.6rem;
+  font-weight: bold;
   margin: 5rem 0 4.5rem;
+   color: var(--info-dblu);
 }
 
-.main-image-tiles {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
+.main-cards {
   gap: 5rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .image-card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   width: 17rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  
 }
 
 .image-card a {
-  text-decoration: none;
   color: black;
+  text-decoration: none;
 }
 
 .image-box {
-  width: 17rem;
-  height: 17rem;
   display: flex;
   justify-content: center;
-  border: 0.5rem solid var(--butn-blue);
-  border-radius: 2rem;
+
+  width: 17rem;
+  height: 17rem;
+
   overflow: hidden;
+  border-radius: 2rem;
+  border: 0.5rem solid var(--butn-blue);
 }
 
 .image-box img {
@@ -240,12 +235,12 @@ Image Tile Cards
 /*==========
 Testimonial
 ============*/
-.testimonial {
-  align-self: center;
+.testimonial {  
   display: flex;
+  align-self: center;
   flex-direction: column;
-  background-color: var(--subh-grey);
   margin: 10rem 0 0;
+  background-color: var(--subh-grey);
 }
 
 .testimonial p {
@@ -260,9 +255,9 @@ Testimonial
 }
 
 .author {
-  align-self: flex-end;
   font-size: 2.5rem;
   font-weight: bold;
+  align-self: flex-end;
 }
 
 .author A {
@@ -270,16 +265,18 @@ Testimonial
   color: black;
 }
 
-/*============
-Action banner
-=============*/
+/*================
+  Call To Action
+==================*/
 .call-to-action-banner {
-  display: flex;
   flex: auto;
+
+  gap: 10rem;
+  display: flex;
   align-self: center;
   align-items: center;
   justify-content: space-between;
-  gap: 10rem;
+  
   
   color: white;
 
@@ -307,9 +304,9 @@ Action banner
   color: white;
 }
 
-/*======
-Footer
-========*/
+/*========
+  Footer
+==========*/
 footer {
   display: flex;
   align-items: center;
@@ -321,27 +318,27 @@ footer {
   background-color: var(--background);
 }
 
-/* @media only screen and (max-width: 1315px) {
+/*=====================
+  Viewport Responsive
+=======================*/
+/*=======================================
+  if viewport width > 320px && 1050px <
+=========================================*/
+@media (min-width: 320px) and (max-width: 1050px) {
 
-
-
-} */
-
-@media (min-width: 360px) and (max-width: 1050px) {
-
-  header {
+  nav {
     flex-direction: column;
     justify-content: center;
     align-items: center;
   }
 
-  header nav ul {
+  nav ul {
     display: flex;
     gap: calc(25vmin);
     margin-top: 0.5rem;
   }
 
-  .header-logo {
+  nav .header-logo {
     margin-right: 2rem;
   }
 
@@ -359,24 +356,24 @@ footer {
     margin-top: 1rem;
   }
 
-  header,
+  nav,
   .title-card {
     padding-left: 4rem;
     padding-right: 4rem;
   }
 
-  .main-info {
+  main {
     text-align: center;
   }
 
   .call-to-action-banner {
-    flex-direction: column;
+    gap: 6rem;
     align-items: center;
-    padding: 2rem 2rem;
+    flex-direction: column;
+    text-align: center;
     margin-left: 2rem;
     margin-right: 2rem;
-    gap: 6rem;
-    text-align: center;
+    padding: 2rem 2rem;
   }
 
   .call-to-action-banner p {
@@ -411,15 +408,20 @@ footer {
   }  
 }
 
+/*============================
+  Run when vw hits < 1050px 
+==============================*/
 @media (max-width: 1050px) {
   .title-card {
     flex-wrap: wrap;
   }
 }
 
+/*============================
+  if viewport width < 1050px 
+==============================*/
 @media (min-width: 1050px) {
   .testimonial {
     padding: 11rem 15rem;
   }
-  
 }
