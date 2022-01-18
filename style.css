@@ -267,8 +267,6 @@ Testimonial
   Call To Action
 ==================*/
 .call-to-action-banner {
-  flex: auto;
-
   gap: 10rem;
   display: flex;
   align-self: center;
