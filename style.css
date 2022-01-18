@@ -144,6 +144,7 @@ nav ul {
 }
 
 .title-card-col-2 {
+  height: 25rem;
   width: 52.5rem;
   overflow: hidden;
   overflow-x: hidden;
@@ -151,10 +152,7 @@ nav ul {
   border-radius: 0.3rem;
   background-color: plum;
   border: 0.4rem solid rgb(65, 59, 121);
-}
 
-.title-card-col-2 {
-  height: 25rem;
   display: flex;
   align-items: center;
   justify-content: center;
